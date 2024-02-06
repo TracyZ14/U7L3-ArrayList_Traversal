@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 public class ArrayListTest
 {
     public static void main(String[] args)
@@ -28,6 +29,7 @@ public class ArrayListTest
         }
         */
 
+        /*
         ArrayList<Cat> catList = new ArrayList<Cat>();
         catList.add(new Cat("Patty"));
         catList.add(new Cat("Keith"));
@@ -51,6 +53,33 @@ public class ArrayListTest
         while(i < catList.size())
         {
             System.out.println(catList.get(i).getName());
+            i++;
         }
+        */
+
+        /*
+        ArrayList<Integer> nums = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+        for(int i = 1; i < (nums.size() - 1); i++)
+        {
+            nums.set((i - 1), (nums.get(i) + nums.get(i + 1)));
+        }
+        System.out.println(nums);
+        */
+
+        ArrayList<Integer> ints = new ArrayList<Integer>();
+        ints.add(0, 1);
+        ints.add(0, 2);
+        ints.add(0, 3);
+        ints.add(0, 4);
+        ints.add(0, 5);
+        ints.add(0, 6);
+        ArrayList<Integer> newInts = new ArrayList<Integer>();
+        // traverse the entire ints array backwards
+        for(int i = ints.size() - 1; i >= 0; i--)
+        {
+            newInts.add(ints.get(i));
+        }
+        System.out.println(ints);
+        System.out.println(newInts);
     }
 }
